@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { AuthService } from "../../core/auth.service";
 import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
+import {NgModule}           from '@angular/core';
 
 @Component({
   selector: 'user-form',
@@ -17,8 +18,13 @@ export class UserFormComponent implements OnInit {
 
    ngOnInit(): void {
      this.buildForm();
+    
+     
    }
-
+     @Input() name;
+     
+    
+  
    toggleForm() {
      this.newUser = !this.newUser;
    }

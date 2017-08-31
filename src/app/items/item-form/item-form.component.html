@@ -1,11 +1,22 @@
-<h3>New Task Form</h3>
+<h3>Enter Weight below</h3>
 
-    <label class="label">Name: </label>
+    
 
-    <input placeholder="Item Title" class="input"
+    <input type="hidden" placeholder="Item Title" class="input"
     [(ngModel)]="item.title"
-    required minlength="2" maxlength="23"
+     minlength="2" maxlength="23"
     #title='ngModel' autofocus>
+
+   <!-- <label class="label">Weight: </label> -->
+
+    <input placeholder="your weight" class="input"
+    [(ngModel)]="item.weight"
+    required minlength="2" maxlength="23"
+    #weight='ngModel' autofocus>
+
+    
+
+  
 
     <div *ngIf="title.dirty">
       <span *ngIf='title.errors; then errors else valid'>template renders here...</span>
